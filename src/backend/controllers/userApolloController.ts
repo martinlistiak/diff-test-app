@@ -1,5 +1,5 @@
 import { ApolloGithubClient } from '../../clients';
-import fetchUserQuery from '../gql/fetchUser.gql';
+import fetchUserQuery from '../gql/fetchUser';
 
 const fetchUser = async (req: any, res: any, next: any) => {
 
