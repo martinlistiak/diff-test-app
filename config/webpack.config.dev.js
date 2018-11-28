@@ -96,11 +96,9 @@ module.exports = {
       '.jsx',
     ],
     alias: {
-      
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
-      '@src': path.resolve(__dirname, ''),
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
@@ -227,6 +225,11 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader',
       },
       // ** STOP ** Are you adding a new loader?
       // Make sure to add the new loader(s) before the "file" loader.

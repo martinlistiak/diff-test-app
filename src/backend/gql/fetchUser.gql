@@ -1,0 +1,20 @@
+query {
+    user ($login: String!) {
+        login
+        name
+        avatarUrl
+        location
+        url
+        createdAt
+        repositories {
+            name
+            updatedAt
+            issues {
+                id
+            }
+            watchers {
+                id
+            }
+        }
+    }
+}
